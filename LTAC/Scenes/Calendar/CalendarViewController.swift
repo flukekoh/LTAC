@@ -29,7 +29,7 @@ final class CalendarViewController: UIViewController {
         return view
     }()
     
-    private let collectionData = CalendarItemModel.currentYearCalendar
+    private let collectionData = CalendarEventModel.currentYearCalendar
     
     override func viewDidLoad() {
         super.viewDidLoad()

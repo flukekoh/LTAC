@@ -21,12 +21,34 @@ final class ResultsViewController: UIViewController {
             ResultsCell.self,
             forCellWithReuseIdentifier: ResultsCell.identifier
         )
+        view.register(ResultsHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: ResultsHeader.identifier)
+        
         view.tintColor = .ltacWhiteBase
         view.dataSource = self
         view.delegate = self
         view.translatesAutoresizingMaskIntoConstraints = false
         
         return view
+    }()
+    
+    private lazy var searchTextField: UISearchTextField = {
+        let searchTextField = UISearchTextField()
+        searchTextField.delegate = self
+        searchTextField.placeholder = "Поиск"
+        searchTextField.backgroundColor = UIColor(named: "SearchFieldColor")
+        searchTextField.textColor = UIColor(named: "SearchFieldTextColor")
+        searchTextField.tokenBackgroundColor = UIColor(named: "SearchFieldColor")
+        searchTextField.translatesAutoresizingMaskIntoConstraints = false
+        return searchTextField
+    }()
+    
+    private let resultsHeaderLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Результаты"
+        label.font = UIFont.systemFont(ofSize: 34, weight: .bold)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        
+        return label
     }()
     
     private let collectionData = ResultViewModel.mockedResults
@@ -43,12 +65,23 @@ final class ResultsViewController: UIViewController {
     }
     
     private func setupHierarchy() {
+        view.addSubview(resultsHeaderLabel)
+        view.addSubview(searchTextField)
         view.addSubview(collectionView)
     }
     
     private func setupLayout() {
         NSLayoutConstraint.activate([
-            collectionView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            resultsHeaderLabel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 16),
+            
+            resultsHeaderLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 1),
+            resultsHeaderLabel.heightAnchor.constraint(equalToConstant: 41),
+            
+            searchTextField.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 16),
+            searchTextField.topAnchor.constraint(equalTo: resultsHeaderLabel.bottomAnchor, constant: 7),
+            searchTextField.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -16),
+            
+            collectionView.topAnchor.constraint(equalTo: searchTextField.bottomAnchor),
             collectionView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
             collectionView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
             collectionView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
@@ -71,7 +104,7 @@ extension ResultsViewController: UICollectionViewDataSource {
             return UICollectionViewCell()
         }
 
-        cell.currentEvent = collectionData[indexPath.row]
+        cell.currentResult = collectionData[indexPath.row]
 
         cell.configure()
 
@@ -95,5 +128,14 @@ extension ResultsViewController: UICollectionViewDelegateFlowLayout {
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 12, left: baseInset, bottom: baseInset, right: baseInset)
+    }
+}
+
+extension ResultsViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        searchTextField.resignFirstResponder()
+
+        
+        return true
     }
 }

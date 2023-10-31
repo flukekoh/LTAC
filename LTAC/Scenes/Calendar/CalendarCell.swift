@@ -10,7 +10,7 @@ import UIKit
 final class CalendarCell: UICollectionViewCell {
     static let identifier = "CalendarCell"
     
-    var currentEvent: CalendarItemModel?
+    var currentEvent: CalendarEventModel?
     
     private var eventNumberLabel: UILabel = {
         let label = UILabel()

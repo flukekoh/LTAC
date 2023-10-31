@@ -10,7 +10,7 @@ import UIKit
 final class ResultsCell: UICollectionViewCell {
     static let identifier = "ResultsCell"
     
-    var currentEvent: CalendarItemModel?
+    var currentResult: ResultViewModel?
     
     private var eventNumberLabel: UILabel = {
         let label = UILabel()
@@ -92,14 +92,14 @@ final class ResultsCell: UICollectionViewCell {
     }
 
     func configure() {
-        guard let currentEvent = currentEvent else { return }
+        guard let currentResult = currentResult else { return }
         
-        eventNumberLabel.text = "\(currentEvent.eventNumber)"
+        eventNumberLabel.text = "\(currentResult.bestTime)"
         
-        eventDateLabel.text = "\(currentEvent.eventDate)"
+        eventDateLabel.text = "\(currentResult.pilotNumber)"
         
-        trackLogoImage.image = currentEvent.eventTrack.trackLogo
-        
-        configurationLabel.text = currentEvent.trackConfiguration
+//        trackLogoImage.image = currentResult.place
+//        
+//        configurationLabel.text = currentResult.racingCar
     }
 }
