@@ -16,8 +16,8 @@ class OnboardingViewController: UIPageViewController, UIPageViewControllerDataSo
         pageControl.numberOfPages = pages.count
         pageControl.currentPage = 0
         
-        pageControl.currentPageIndicatorTintColor = .black
-        pageControl.pageIndicatorTintColor = .gray
+        pageControl.currentPageIndicatorTintColor = .ltacRED
+        pageControl.pageIndicatorTintColor = .ltacWhiteAccent
         
         pageControl.translatesAutoresizingMaskIntoConstraints = false
         
@@ -28,10 +28,10 @@ class OnboardingViewController: UIPageViewController, UIPageViewControllerDataSo
         
         let techButton = UIButton(type: .system)
         
-        techButton.backgroundColor = .black
+        techButton.backgroundColor = .ltacRED
         techButton.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .bold)
-        techButton.setTitleColor(.white, for: .normal)
-        techButton.setTitle("Вот это технологии!", for: .normal)
+        techButton.setTitleColor(.ltacWhiteBase, for: .normal)
+        techButton.setTitle("Вперед", for: .normal)
         techButton.layer.cornerRadius = 16
         techButton.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
         techButton.translatesAutoresizingMaskIntoConstraints = false
@@ -40,13 +40,25 @@ class OnboardingViewController: UIPageViewController, UIPageViewControllerDataSo
     }()
     
     lazy var pages: [UIViewController] = {
-        let bluePage = OnboardingPageViewController(text: "LADA Time Attack Cup - монокубок, наши участники выступают только на автомобилях ВАЗ!",
+        let firstPage = OnboardingPageViewController(text: "То, что всегда хотелось попробовать каждому мальчишке! Чемпионат проводится на различных гоночных трассах России - от спринтовых до суперскоростных.",
                                                     backgroundImage: UIImage(named: "OnboardingBackgroundFirst"))
         
-        let redPage = OnboardingPageViewController(text: "То, что всегда хотелось попробовать каждому мальчишке! Чемпионат проводится на различных гоночных трассах России - от спринтовых до суперскоростных.",
+        let secondPage = OnboardingPageViewController(text: "Не нужно никакой специальной подготовки - для начала достаточно исправного каждодневного автомобиля.",
                                                    backgroundImage: UIImage(named: "OnboardingBackgroundSecond"))
         
-        return [bluePage, redPage]
+        let thirdPage = OnboardingPageViewController(text: "Контакты и открытая борьба между автомобилями недопустимы. Риск ниже, чем при обычной поездке по дорогам общего пользования.",
+                                                   backgroundImage: UIImage(named: "OnboardingBackgroundThird"))
+        
+        let fourthPage = OnboardingPageViewController(text: "Несколько классов и зачетов для самых разных моделей, модификаций и уровней подготовки автомобилей ВАЗ.",
+                                                   backgroundImage: UIImage(named: "OnboardingBackgroundFourth"))
+        
+        let fifthPage = OnboardingPageViewController(text: "Скидки для новичков, скидки студентам, скидки участникам из дальних регионов и даже возможность попасть на трек абсолютно бесплатно за репост!",
+                                                   backgroundImage: UIImage(named: "OnboardingBackgroundFifth"))
+        
+        let sixthPage = OnboardingPageViewController(text: "Десятки подготовленных машин самой любимой отечественной марки - от почти стандартных до серьезно подготовленных! Дружеская обстановка, поддержка, обмен опытом и здоровая конкуренция. Вливайтесь!",
+                                                   backgroundImage: UIImage(named: "OnboardingBackgroundSixth"))
+        
+        return [firstPage, secondPage, thirdPage, fourthPage, fifthPage, sixthPage]
     }()
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {

@@ -20,19 +20,19 @@ final class TabBarController: UITabBarController {
         tabBar.isTranslucent = false
         
         let calendarViewController = CalendarViewController()
-        calendarViewController.tabBarItem = UITabBarItem(title: "Календарь", image: UIImage(systemName: "record.circle.fill"), selectedImage: nil)
+        calendarViewController.tabBarItem = UITabBarItem(title: "Календарь", image: UIImage(systemName: "calendar"), selectedImage: nil)
         
         let regulationsViewController = RegulationsViewController()
-        regulationsViewController.tabBarItem = UITabBarItem(title: "Регламент", image: UIImage(systemName: "hare.fill"), selectedImage: nil)
+        regulationsViewController.tabBarItem = UITabBarItem(title: "Регламент", image: UIImage(systemName: "doc.text"), selectedImage: nil)
         
         let resultsViewController = ResultsViewController()
-        resultsViewController.tabBarItem = UITabBarItem(title: "Результаты", image: UIImage(systemName: "hare.fill"), selectedImage: nil)
+        resultsViewController.tabBarItem = UITabBarItem(title: "Результаты", image: UIImage(systemName: "list.bullet.clipboard"), selectedImage: nil)
         
         let photoGalleryViewController = PhotoGalleryViewController()
-        photoGalleryViewController.tabBarItem = UITabBarItem(title: "Фото", image: UIImage(systemName: "hare.fill"), selectedImage: nil)
+        photoGalleryViewController.tabBarItem = UITabBarItem(title: "Фото", image: UIImage(systemName: "photo.stack"), selectedImage: nil)
         
         let aboutLTACViewController = AboutLTACViewController()
-        aboutLTACViewController.tabBarItem = UITabBarItem(title: "О LTAC", image: UIImage(systemName: "hare.fill"), selectedImage: nil)
+        aboutLTACViewController.tabBarItem = UITabBarItem(title: "О LTAC", image: UIImage(systemName: "car.2"), selectedImage: nil)
         
         self.viewControllers = [
             regulationsViewController,

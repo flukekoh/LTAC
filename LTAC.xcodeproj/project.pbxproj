@@ -23,6 +23,18 @@
 		A26A74B52AF12DE700061E43 /* AboutLTACViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26A74B42AF12DE700061E43 /* AboutLTACViewController.swift */; };
 		A26A74B82AF12E2A00061E43 /* PhotoGalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26A74B72AF12E2A00061E43 /* PhotoGalleryViewController.swift */; };
 		A26A74BB2AF132FF00061E43 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26A74BA2AF132FF00061E43 /* Colors.swift */; };
+		A26A74BE2AF13A2600061E43 /* CalendarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26A74BD2AF13A2600061E43 /* CalendarCell.swift */; };
+		A26A74C02AF13B9200061E43 /* CalendarEventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26A74BF2AF13B9200061E43 /* CalendarEventModel.swift */; };
+		A26A74C22AF13C5400061E43 /* RacingTrackModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26A74C12AF13C5400061E43 /* RacingTrackModel.swift */; };
+		A26A74C42AF177F500061E43 /* ResultsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26A74C32AF177F500061E43 /* ResultsCell.swift */; };
+		A26A74C62AF178A500061E43 /* ResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26A74C52AF178A500061E43 /* ResultViewModel.swift */; };
+		A26A74C82AF17A9100061E43 /* PilotModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26A74C72AF17A9100061E43 /* PilotModel.swift */; };
+		A26A74CA2AF17AC200061E43 /* CarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26A74C92AF17AC200061E43 /* CarModel.swift */; };
+		A26A74CC2AF17B4C00061E43 /* CarTypeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26A74CB2AF17B4C00061E43 /* CarTypeModel.swift */; };
+		A26A74CE2AF17BFB00061E43 /* TyreTypeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26A74CD2AF17BFB00061E43 /* TyreTypeModel.swift */; };
+		A26A74D02AF17C1300061E43 /* TyreSizeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26A74CF2AF17C1300061E43 /* TyreSizeModel.swift */; };
+		A26A74D22AF17CA000061E43 /* TeamModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26A74D12AF17CA000061E43 /* TeamModel.swift */; };
+		A26A74D42AF17E2600061E43 /* RacingClassModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26A74D32AF17E2600061E43 /* RacingClassModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +56,18 @@
 		A26A74B42AF12DE700061E43 /* AboutLTACViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutLTACViewController.swift; sourceTree = "<group>"; };
 		A26A74B72AF12E2A00061E43 /* PhotoGalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGalleryViewController.swift; sourceTree = "<group>"; };
 		A26A74BA2AF132FF00061E43 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		A26A74BD2AF13A2600061E43 /* CalendarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCell.swift; sourceTree = "<group>"; };
+		A26A74BF2AF13B9200061E43 /* CalendarEventModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarEventModel.swift; sourceTree = "<group>"; };
+		A26A74C12AF13C5400061E43 /* RacingTrackModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RacingTrackModel.swift; sourceTree = "<group>"; };
+		A26A74C32AF177F500061E43 /* ResultsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsCell.swift; sourceTree = "<group>"; };
+		A26A74C52AF178A500061E43 /* ResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewModel.swift; sourceTree = "<group>"; };
+		A26A74C72AF17A9100061E43 /* PilotModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PilotModel.swift; sourceTree = "<group>"; };
+		A26A74C92AF17AC200061E43 /* CarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarModel.swift; sourceTree = "<group>"; };
+		A26A74CB2AF17B4C00061E43 /* CarTypeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarTypeModel.swift; sourceTree = "<group>"; };
+		A26A74CD2AF17BFB00061E43 /* TyreTypeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TyreTypeModel.swift; sourceTree = "<group>"; };
+		A26A74CF2AF17C1300061E43 /* TyreSizeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TyreSizeModel.swift; sourceTree = "<group>"; };
+		A26A74D12AF17CA000061E43 /* TeamModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamModel.swift; sourceTree = "<group>"; };
+		A26A74D32AF17E2600061E43 /* RacingClassModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RacingClassModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +106,7 @@
 				A26A74A22AF1297B00061E43 /* TabBarController.swift */,
 				A26A74A42AF129C100061E43 /* RootViewController.swift */,
 				A26A74B92AF132EA00061E43 /* DesignSystem */,
+				A26A74BC2AF1390200061E43 /* Models */,
 				A26A74AA2AF12B2B00061E43 /* Scenes */,
 				A26A74A12AF1291000061E43 /* Onboarding */,
 				A26A74922AF1273700061E43 /* Main.storyboard */,
@@ -96,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				A26A74B12AF12CEF00061E43 /* ResultsViewController.swift */,
+				A26A74C32AF177F500061E43 /* ResultsCell.swift */,
 			);
 			path = Results;
 			sourceTree = "<group>";
@@ -133,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				A26A74AD2AF12CA900061E43 /* CalendarViewController.swift */,
+				A26A74BD2AF13A2600061E43 /* CalendarCell.swift */,
 			);
 			path = Calendar;
 			sourceTree = "<group>";
@@ -159,6 +186,23 @@
 				A26A74BA2AF132FF00061E43 /* Colors.swift */,
 			);
 			path = DesignSystem;
+			sourceTree = "<group>";
+		};
+		A26A74BC2AF1390200061E43 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A26A74BF2AF13B9200061E43 /* CalendarEventModel.swift */,
+				A26A74C12AF13C5400061E43 /* RacingTrackModel.swift */,
+				A26A74C52AF178A500061E43 /* ResultViewModel.swift */,
+				A26A74C72AF17A9100061E43 /* PilotModel.swift */,
+				A26A74C92AF17AC200061E43 /* CarModel.swift */,
+				A26A74CB2AF17B4C00061E43 /* CarTypeModel.swift */,
+				A26A74CD2AF17BFB00061E43 /* TyreTypeModel.swift */,
+				A26A74CF2AF17C1300061E43 /* TyreSizeModel.swift */,
+				A26A74D12AF17CA000061E43 /* TeamModel.swift */,
+				A26A74D32AF17E2600061E43 /* RacingClassModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,16 +277,28 @@
 			buildActionMask = 2147483647;
 			files = (
 				A26A74AE2AF12CA900061E43 /* CalendarViewController.swift in Sources */,
+				A26A74C62AF178A500061E43 /* ResultViewModel.swift in Sources */,
+				A26A74D22AF17CA000061E43 /* TeamModel.swift in Sources */,
+				A26A74BE2AF13A2600061E43 /* CalendarCell.swift in Sources */,
 				A26A74A52AF129C100061E43 /* RootViewController.swift in Sources */,
 				A26A74B02AF12CDE00061E43 /* RegulationsViewController.swift in Sources */,
 				A26A74B22AF12CEF00061E43 /* ResultsViewController.swift in Sources */,
+				A26A74C42AF177F500061E43 /* ResultsCell.swift in Sources */,
+				A26A74C02AF13B9200061E43 /* CalendarEventModel.swift in Sources */,
 				A26A74B82AF12E2A00061E43 /* PhotoGalleryViewController.swift in Sources */,
 				A26A74B52AF12DE700061E43 /* AboutLTACViewController.swift in Sources */,
+				A26A74D42AF17E2600061E43 /* RacingClassModel.swift in Sources */,
 				A26A74A72AF12AB300061E43 /* OnboardingViewController.swift in Sources */,
+				A26A74C82AF17A9100061E43 /* PilotModel.swift in Sources */,
 				A26A74912AF1273700061E43 /* ViewController.swift in Sources */,
+				A26A74CE2AF17BFB00061E43 /* TyreTypeModel.swift in Sources */,
 				A26A74BB2AF132FF00061E43 /* Colors.swift in Sources */,
+				A26A74C22AF13C5400061E43 /* RacingTrackModel.swift in Sources */,
 				A26A74A32AF1297B00061E43 /* TabBarController.swift in Sources */,
+				A26A74D02AF17C1300061E43 /* TyreSizeModel.swift in Sources */,
+				A26A74CA2AF17AC200061E43 /* CarModel.swift in Sources */,
 				A26A748D2AF1273700061E43 /* AppDelegate.swift in Sources */,
+				A26A74CC2AF17B4C00061E43 /* CarTypeModel.swift in Sources */,
 				A26A74A92AF12AF800061E43 /* OnboardingPageViewController.swift in Sources */,
 				A26A748F2AF1273700061E43 /* SceneDelegate.swift in Sources */,
 			);
