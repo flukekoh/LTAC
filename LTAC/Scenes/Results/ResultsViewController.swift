@@ -29,7 +29,7 @@ final class ResultsViewController: UIViewController {
         return view
     }()
     
-    private let collectionData = CalendarEventModel.currentYearCalendar
+    private let collectionData = ResultViewModel.mockedResults
     
     override func viewDidLoad() {
         super.viewDidLoad()

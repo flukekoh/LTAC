@@ -13,4 +13,8 @@ struct CarTypeModel {
 
 extension CarTypeModel {
     static let lada2106 = CarTypeModel(typeName: "2106")
+    static let ladaKalina2 = CarTypeModel(typeName: "Калина 2")
+    static let ladaKalinaSport = CarTypeModel(typeName: "Калина Спорт")
+    static let lada2105 = CarTypeModel(typeName: "2105")
+    
 }

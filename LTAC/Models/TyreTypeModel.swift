@@ -14,4 +14,6 @@ struct TyreTypeModel {
 
 extension TyreTypeModel {
     static let tigarHP = TyreTypeModel(make: "Tigar", name: "High Performance")
+    static let sailun = TyreTypeModel(make: "Sailun", name: "Atrezzo ZSR")
+    static let michelin = TyreTypeModel(make: "Michelin", name: "Pilot Sport 3")
 }

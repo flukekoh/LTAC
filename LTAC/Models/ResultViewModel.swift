@@ -31,84 +31,58 @@ extension ResultViewModel {
         pilot: .pilot1,
         racingCar: .lada61,
         tyreType: .tigarHP,
-        tyreSize: <#T##TyreSizeModel#>,
-        bestTime: <#T##String#>,
-        team: <#T##TeamModel#>,
-        scoredPoints: <#T##Int#>),
+        tyreSize: .tyre195_50_15,
+        bestTime: "0:59.563",
+        team: .rlc,
+        scoredPoints: 100),
     ResultViewModel(
         racingClass: .stock,
-        event: <#T##CalendarEventModel#>,
+        event: .event1,
         place: 2,
-        pilotNumber: <#T##Int#>,
+        pilotNumber: 186,
         pilot: .pilot2,
-        racingCar: <#T##CarModel#>,
-        tyreType: <#T##TyreTypeModel#>,
-        tyreSize: <#T##TyreSizeModel#>,
-        bestTime: <#T##String#>,
-        team: <#T##TeamModel#>,
-        scoredPoints: <#T##Int#>),
+        racingCar: .lada186,
+        tyreType: .sailun,
+        tyreSize: .tyre195_45_15,
+        bestTime: "1:00.049",
+        team: .toysport,
+        scoredPoints: 91),
     ResultViewModel(
         racingClass: .stock,
-        event: <#T##CalendarEventModel#>,
+        event: .event1,
         place: 3,
-        pilotNumber: <#T##Int#>,
+        pilotNumber: 170,
         pilot: .pilot3,
-        racingCar: <#T##CarModel#>,
-        tyreType: <#T##TyreTypeModel#>,
-        tyreSize: <#T##TyreSizeModel#>,
-        bestTime: <#T##String#>,
-        team: <#T##TeamModel#>,
-        scoredPoints: <#T##Int#>),
+        racingCar: .lada170,
+        tyreType: .michelin,
+        tyreSize: .tyre195_50_15,
+        bestTime: "1:00.206",
+        team: .privateer,
+        scoredPoints: 84),
     ResultViewModel(
         racingClass: .stock,
-        event: <#T##CalendarEventModel#>,
+        event: .event1,
         place: 4,
-        pilotNumber: <#T##Int#>,
+        pilotNumber: 8,
         pilot: .pilot4,
-        racingCar: <#T##CarModel#>,
-        tyreType: <#T##TyreTypeModel#>,
-        tyreSize: <#T##TyreSizeModel#>,
-        bestTime: <#T##String#>,
-        team: <#T##TeamModel#>,
-        scoredPoints: <#T##Int#>),
+        racingCar: .lada8,
+        tyreType: .michelin,
+        tyreSize: .tyre195_50_15,
+        bestTime: "1:00.424",
+        team: .teamrs,
+        scoredPoints: 78),
     ResultViewModel(
         racingClass: .stock,
-        event: <#T##CalendarEventModel#>,
+        event: .event1,
         place: 5,
-        pilotNumber: <#T##Int#>,
+        pilotNumber: 314,
         pilot: .pilot5,
-        racingCar: <#T##CarModel#>,
-        tyreType: <#T##TyreTypeModel#>,
-        tyreSize: <#T##TyreSizeModel#>,
-        bestTime: <#T##String#>,
-        team: <#T##TeamModel#>,
-        scoredPoints: <#T##Int#>)
+        racingCar: .lada314,
+        tyreType: .michelin,
+        tyreSize: .tyre195_50_15,
+        bestTime: "1:00.632",
+        team: .amkc,
+        scoredPoints: 73)
     ]
 }
 
-#    Пилот    Город    Автомобиль    Шины    Команда    Лучшее время    Очки
-1    61
-Прянишников Александр
-Москва
-ВАЗ 2106
-TIGAR High Performance 195/50 R15    RLC Racing Team    0:59.563    100
-2    186
-Рязанов Александр
-Москва
-ВАЗ 2106
-SAILUN Atrezzo ZSR 195/45 R15    Toysport    1:00.049    91
-3    170
-Серегин Арсений
-Москва
-Лада Калина 2
-MICHELIN Pilot Sport 3 195/50 R15    личный зачёт    1:00.206    84
-4    8
-Адельфинский Кирилл
-Москва
-ВАЗ 2105
-MICHELIN Pilot Sport 3 195/50 R15    Team-RS    1:00.424    78
-5    314
-
-Москва
-Лада Калина Спорт
-MICHELIN Pilot Sport 3 195/50 R15    AMKC Racing Team    1:00.632    73
