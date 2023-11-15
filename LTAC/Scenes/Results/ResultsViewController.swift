@@ -12,7 +12,7 @@ final class ResultsViewController: UIViewController {
     private let baseInset: CGFloat = 16
     private let sectionSpacing: CGFloat = 7
     private let lineSpacing: CGFloat = 20
-    private let itemHeight: CGFloat = 80
+    private let itemHeight: CGFloat = 106
     
     private lazy var collectionView: UICollectionView = {
         let view = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())

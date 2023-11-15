@@ -12,11 +12,11 @@ final class CalendarViewController: UIViewController {
     private let baseInset: CGFloat = 16
     private let sectionSpacing: CGFloat = 7
     private let lineSpacing: CGFloat = 20
-    private let itemHeight: CGFloat = 80
+    private let itemHeight: CGFloat = 100
     
     private lazy var collectionView: UICollectionView = {
         let view = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
-        view.backgroundColor = .ltacWhiteAccent
+        view.backgroundColor = .ltacWhiteBase
         view.register(
             CalendarCell.self,
             forCellWithReuseIdentifier: CalendarCell.identifier
@@ -27,6 +27,15 @@ final class CalendarViewController: UIViewController {
         view.translatesAutoresizingMaskIntoConstraints = false
         
         return view
+    }()
+    
+    private let calendarHeaderLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Календарь"
+        label.font = UIFont.systemFont(ofSize: 34, weight: .bold)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        
+        return label
     }()
     
     private let collectionData = CalendarEventModel.currentYearCalendar
@@ -44,12 +53,18 @@ final class CalendarViewController: UIViewController {
     }
     
     private func setupHierarchy() {
+        view.addSubview(calendarHeaderLabel)
         view.addSubview(collectionView)
     }
     
     private func setupLayout() {
         NSLayoutConstraint.activate([
-            collectionView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            calendarHeaderLabel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 16),
+            
+            calendarHeaderLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 1),
+            calendarHeaderLabel.heightAnchor.constraint(equalToConstant: 41),
+            
+            collectionView.topAnchor.constraint(equalTo: calendarHeaderLabel.bottomAnchor),
             collectionView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
             collectionView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
             collectionView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),

@@ -12,38 +12,76 @@ final class ResultsCell: UICollectionViewCell {
     
     var currentResult: ResultViewModel?
     
-    private var eventNumberLabel: UILabel = {
+    private var placeLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .ltacBlack
-        label.font = .boldSystemFont(ofSize: 12)
+        label.font = .boldSystemFont(ofSize: 16)
         return label
     }()
     
-    private var eventDateLabel: UILabel = {
+    private var pilotNumberLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .ltacBlack
-        label.font = .boldSystemFont(ofSize: 12)
+        label.font = .boldSystemFont(ofSize: 16)
         return label
     }()
     
-    private var configurationLabel: UILabel = {
+    private var pilotLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .ltacBlack
-        label.font = .boldSystemFont(ofSize: 12)
+        label.font = .boldSystemFont(ofSize: 16)
         return label
     }()
     
-    private var trackLogoImage: UIImageView = {
-        let image = UIImageView()
-        image.contentMode = .scaleAspectFill
-        image.translatesAutoresizingMaskIntoConstraints = false
-        image.layer.cornerRadius = 12
-        image.layer.masksToBounds = true
-
-        return image
+    private var cityLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textColor = .ltacBlack
+        label.font = .boldSystemFont(ofSize: 16)
+        return label
+    }()
+    
+    private var carLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textColor = .ltacBlack
+        label.font = .boldSystemFont(ofSize: 16)
+        return label
+    }()
+    
+    private var tyresLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textColor = .ltacBlack
+        label.font = .boldSystemFont(ofSize: 16)
+        return label
+    }()
+    
+    private var teamLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textColor = .ltacBlack
+        label.font = .boldSystemFont(ofSize: 16)
+        return label
+    }()
+    
+    private var timeLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textColor = .ltacBlack
+        label.font = .boldSystemFont(ofSize: 16)
+        return label
+    }()
+    
+    private var scoredPointsLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textColor = .ltacBlack
+        label.font = .boldSystemFont(ofSize: 16)
+        return label
     }()
     
     override init(frame: CGRect) {
@@ -59,47 +97,67 @@ final class ResultsCell: UICollectionViewCell {
     }
 
     private func setupView() {
-        backgroundColor = .ltacWhiteAccent
+        backgroundColor = .red
     }
 
     func setupHierarchy() {
-        contentView.addSubview(eventNumberLabel)
-        contentView.addSubview(eventDateLabel)
-        contentView.addSubview(trackLogoImage)
-        contentView.addSubview(configurationLabel)
+        contentView.addSubview(placeLabel)
+        contentView.addSubview(pilotNumberLabel)
+        contentView.addSubview(pilotLabel)
+        contentView.addSubview(cityLabel)
+        contentView.addSubview(carLabel)
+        contentView.addSubview(tyresLabel)
+        contentView.addSubview(teamLabel)
+        contentView.addSubview(timeLabel)
+        contentView.addSubview(scoredPointsLabel)
     }
 
     func setupLayout() {
         NSLayoutConstraint.activate([
-            eventNumberLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
-            eventNumberLabel.topAnchor.constraint(equalTo: contentView.topAnchor),
-            eventNumberLabel.heightAnchor.constraint(equalToConstant: 80),
-            eventNumberLabel.widthAnchor.constraint(equalToConstant: 80),
+            placeLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 8),
+            placeLabel.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
+            
 
-            eventDateLabel.trailingAnchor.constraint(equalTo: eventNumberLabel.trailingAnchor, constant: 6),
-            eventDateLabel.topAnchor.constraint(equalTo: eventNumberLabel.topAnchor, constant: -6),
-            eventDateLabel.heightAnchor.constraint(equalToConstant: 42),
-            eventDateLabel.widthAnchor.constraint(equalToConstant: 42),
+            pilotNumberLabel.leadingAnchor.constraint(equalTo: placeLabel.trailingAnchor, constant: 6),
+            pilotNumberLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 6),
+            
+            pilotLabel.leadingAnchor.constraint(equalTo: placeLabel.trailingAnchor, constant: 6),
+            pilotLabel.topAnchor.constraint(equalTo: pilotNumberLabel.bottomAnchor, constant: 6),
+            
+            cityLabel.leadingAnchor.constraint(equalTo: placeLabel.trailingAnchor, constant: 6),
+            cityLabel.topAnchor.constraint(equalTo: pilotLabel.bottomAnchor, constant: 6),
+            
+            carLabel.leadingAnchor.constraint(equalTo: placeLabel.trailingAnchor, constant: 6),
+            carLabel.topAnchor.constraint(equalTo: cityLabel.bottomAnchor, constant: 6),
+            
 
-            trackLogoImage.leadingAnchor.constraint(equalTo: eventNumberLabel.trailingAnchor, constant: 12),
-            trackLogoImage.topAnchor.constraint(equalTo: eventNumberLabel.topAnchor, constant: 7),
-            trackLogoImage.heightAnchor.constraint(equalToConstant: 22),
-
-            configurationLabel.leadingAnchor.constraint(equalTo: eventNumberLabel.trailingAnchor, constant: 12),
-            configurationLabel.topAnchor.constraint(equalTo: eventNumberLabel.bottomAnchor, constant: 4),
-            configurationLabel.heightAnchor.constraint(equalToConstant: 12)
+            tyresLabel.leadingAnchor.constraint(equalTo: pilotLabel.trailingAnchor, constant: 6),
+            tyresLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 6),
+            
+            teamLabel.leadingAnchor.constraint(equalTo: pilotLabel.trailingAnchor, constant: 6),
+            teamLabel.topAnchor.constraint(equalTo: tyresLabel.bottomAnchor, constant: 6),
+            
+            timeLabel.leadingAnchor.constraint(equalTo: pilotLabel.trailingAnchor, constant: 6),
+            timeLabel.topAnchor.constraint(equalTo: teamLabel.bottomAnchor, constant: 6),
+            
+            scoredPointsLabel.leadingAnchor.constraint(equalTo: pilotLabel.trailingAnchor, constant: 6),
+            scoredPointsLabel.topAnchor.constraint(equalTo: timeLabel.bottomAnchor, constant: 6)
+            
         ])
     }
 
     func configure() {
         guard let currentResult = currentResult else { return }
         
-        eventNumberLabel.text = "\(currentResult.bestTime)"
+        placeLabel.text = "\(currentResult.place)"
+        pilotNumberLabel.text = "\(currentResult.pilotNumber)"
+        pilotLabel.text = "\(currentResult.pilot.name) \(currentResult.pilot.surname)"
+        cityLabel.text = "\(currentResult.pilot.city)"
+        carLabel.text = "\(currentResult.racingCar.carBrand) \(currentResult.racingCar.carType.typeName)"
+        tyresLabel.text = "\(currentResult.tyreType.make) \(currentResult.tyreType.name)  R\(currentResult.tyreSize.diameter) \(currentResult.tyreSize.width)/\(currentResult.tyreSize.profile)"
+        teamLabel.text = "\(currentResult.team.name)"
+        timeLabel.text = "\(currentResult.bestTime)"
+        scoredPointsLabel.text = "\(currentResult.scoredPoints)"
         
-        eventDateLabel.text = "\(currentResult.pilotNumber)"
-        
-//        trackLogoImage.image = currentResult.place
-//        
-//        configurationLabel.text = currentResult.racingCar
     }
 }
